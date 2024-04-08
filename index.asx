@@ -1,0 +1,17 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CourseList from './CourseList';
+import CourseEdit from './CourseEdit';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<CourseList />} />
+        <Route path="/edit/:id" element={<CourseEdit />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
